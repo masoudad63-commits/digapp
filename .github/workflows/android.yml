@@ -37,10 +37,10 @@ jobs:
           echo "ANDROID_HOME=$HOME/android-sdk" >> $GITHUB_ENV
           echo "$HOME/android-sdk/platform-tools:$PATH" >> $GITHUB_PATH
 
-      - name: Install Python dependencies
+      - name: Install Python dependencies (using mirror)
         run: |
           pip install --upgrade pip
-          pip install --upgrade --no-cache-dir buildozer cython pillow kivy -i https://pypi.org/simple
+          pip install --upgrade --no-cache-dir buildozer cython pillow kivy -i https://pypi.tuna.tsinghua.edu.cn/simple
 
       - name: Build APK
         run: |
