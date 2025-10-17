@@ -9,8 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      REPO_OS_OVERRIDE: linux
 
     steps:
       - name: Checkout repository
